@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Primary Meta Tags -->
+  <!-- TODO: Replace with your paper title -->
+  <meta name="title"
+    content="Unveiling the Hidden: Early Detection of Invasive Vegetation in Crops with UAV Multispectral Imaging">
+  <!-- TODO: Write a compelling 150-160 character description of your research -->
+  <meta name="description"
+    content="The first dataset composed of synthetic images paired with exact edge map annotations">
+  <!-- TODO: Add 5-10 relevant keywords for your research area -->
+  <meta name="keywords" content="Edge Detection, Synthetic data">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+
+  <!-- Open Graph / Facebook -->
+  <!-- TODO: Same as paper title above -->
+  <meta property="og:title"
+    content="Camo-M3FD: A New Benchmark Dataset for Cross-Spectral Camouflaged Pedestrian Detection">
+  <!-- TODO: Same as description above -->
+  <meta property="og:description"
+    content="The first dataset composed of synthetic images paired with exact edge map annotations">
+  <!-- TODO: Replace with your actual website URL -->
+  <meta property="og:url" content="https://anonymous.4open.science/w/SynShapes-34F0/">
+  <meta property="article:tag" content="Camouflaged Object Detection">
+  <meta property="article:tag" content="Image Segmentation">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- TODO: Same as paper title above -->
+  <meta name="twitter:title"
+    content="Camo-M3FD: A New Benchmark Dataset for Cross-Spectral Camouflaged Pedestrian Detection">
+  <!-- TODO: Same as description above -->
+  <meta name="twitter:description"
+    content="The first dataset composed of synthetic images paired with exact edge map annotations">
+
+  <!-- Additional SEO -->
+  <meta name="theme-color" content="#2563eb">
+  <meta name="msapplication-TileColor" content="#2563eb">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://ajax.googleapis.com">
+  <link rel="preconnect" href="https://documentcloud.adobe.com">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+
+  <!-- TODO: Replace with your paper title and authors -->
+  <title>COD-Weeds</title>
+
+  <!-- Favicon and App Icons -->
+  <link rel="icon" type="image/x-icon" href="static/images/datasetIcon2.ico">
+  <link rel="apple-touch-icon" href="static/images/datasetIcon2.ico">
+
+  <!-- Critical CSS - Load synchronously -->
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <!-- Non-critical CSS - Load asynchronously -->
+  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style"
+    onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style"
+    onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style"
+    onload="this.onload=null;this.rel='stylesheet'">
+
+  <!-- Fallback for browsers that don't support preload -->
+  <noscript>
+    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  </noscript>
+
+  <!-- Fonts - Optimized loading -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Defer non-critical JavaScript -->
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script defer src="static/js/bulma-carousel.min.js"></script>
+  <script defer src="static/js/bulma-slider.min.js"></script>
+  <script defer src="static/js/index.js"></script>
+
+</head>
+
+<!-- Front -->
+
+<body>
+  <!-- Scroll to Top Button -->
+  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <main id="main-content">
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered">
+            <div class="column has-text-centered">
+              <!-- TODO: Replace with your paper title -->
+              <h1 class="title is-1 publication-title">Camo-M3FD: A New Benchmark Dataset for Cross-Spectral Camouflaged
+                Pedestrian Detection</h1>
+              <div class="is-size-5 publication-authors">
+                <!-- TODO: Replace with your paper authors and their personal links -->
+                <!-- <span class="author-block">
+                  <a target="_blank">Henry O. Velesaca</a>,</span>
+                <span class="author-block">
+                  <a target="_blank">Andrea Mero P.</a>,</span>
+                <span class="author-block">
+                  <a target="_blank">Hector Villegas</a>,</span>
+                <span class="author-block">
+                  <a target="_blank">Angel D. Sappa</a></span> -->
+              </div>
+
+              <div class="is-size-5 publication-authors">
+                <span class="author-block">CVPR 2026</span>
+              </div>
+
+
+              <span class="link-block">
+                <a href="" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+
+              <!-- TODO: Replace with your Kaggle repository URL -->
+              <span class="link-block">
+                <a href="" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-download"></i>
+                  </span>
+                  <span>Dataset</span>
+                </a>
+              </span>
+
+              <!-- TODO: Replace with your GitHub repository URL -->
+              <span class="link-block">
+                <a href="" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>GitHub</span>
+                </a>
+              </span>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+      </div>
+    </section>
+
+    <!-- Info about the Dataset -->
+    <section class="hero is-small is-light">
+      <div class="hero-body">
+        <div class="container">
+          <h2 class="title is-light">About the paper</h2>
+
+          <div class="content">
+            <p>
+              Pedestrian detection is fundamental to autonomous driving, robotics, and surveillance. Despite progress in
+              deep learning, reliable identification remains challenging due to occlusions, cluttered backgrounds, and
+              degraded visibility. While multispectral detection—combining visible and thermal sensors—mitigates poor
+              visibility, the challenge of camouflaged pedestrians remains largely unexplored. Existing Camouflaged
+              Object Detection (COD) benchmarks focus on biological species, leaving a gap in safety-critical human
+              detection where targets blend into their surroundings. To address this, we introduce Camo-M3FD, a novel
+              benchmark for cross-spectral camouflaged pedestrian detection, consisting of registered visible-thermal
+              image pairs. The dataset is curated using quantitative metrics to ensure high foreground-background
+              similarity. We provide high-quality pixel-level masks and establish a standardized evaluation framework
+              using state-of-the-art COD models. Our results demonstrate that while thermal signals provide
+              indispensable localization cues, multispectral fusion is essential for refining structural details.
+              Camo-M3FD serves as a foundational resource for developing robust, safety-critical detection systems. The
+              dataset will be available on GitHub https://cod-espol.github.io/AINet/ .
+            </p>
+
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End of Info -->
+
+    <section class="hero teaser">
+      <div class="container is-max-desktop">
+        <div class="hero-body">
+          <div class="container-tb1">
+            <figure id="fig:dataset" class="figure-container">
+              <div class="image-grid">
+                <img src="static/images/rgb/00032.png" alt="RGB 00032">
+                <img src="static/images/rgb/00359.png" alt="RGB 00359">
+                <img src="static/images/rgb/00459.png" alt="RGB 00459">
+                <img src="static/images/rgb/01119.png" alt="RGB 01119">
+                <img src="static/images/rgb/00785.png" alt="RGB 00785">
+
+                <img src="static/images/thermal/00032.png" alt="Thermal 00032">
+                <img src="static/images/thermal/00359.png" alt="Thermal 00359">
+                <img src="static/images/thermal/00459.png" alt="Thermal 00459">
+                <img src="static/images/thermal/01119.png" alt="Thermal 01119">
+                <img src="static/images/thermal/00785.png" alt="Thermal 00785">
+
+                <img src="static/images/gt/00032.png" alt="GT 00032">
+                <img src="static/images/gt/00359.png" alt="GT 00359">
+                <img src="static/images/gt/00459.png" alt="GT 00459">
+                <img src="static/images/gt/01119.png" alt="GT 01119">
+                <img src="static/images/gt/00785.png" alt="GT 00785">
+              </div>
+
+              <figcaption class="figure-caption">
+                Figure 1.Example images of the Camo-M3FD dataset. <i>(1st row)</i> Visible (RGB) images. <i>(2nd
+                  row)</i> Thermal
+                images. <i>(3rd row)</i> Segmentation mask images of camouflaged objects.
+              </figcaption>
+
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero is-small is-light">
+      <div class="container is-max-desktop">
+        <div class="hero-body">
+          <div class="container-tb1">
+            <table id="tab:dataset_comparison" class="academic-table">
+              <thead>
+                <tr>
+                  <th>Dataset</th>
+                  <th>Source</th>
+                  <th>Year</th>
+                  <th>Scope</th>
+                  <th>Type of images</th>
+                  <th class="align-right"># images</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Chameleon [29]</td>
+                  <td>-</td>
+                  <td>2018</td>
+                  <td>Animal</td>
+                  <td>RGB</td>
+                  <td class="align-right">76</td>
+                </tr>
+                <tr>
+                  <td>CAMO [21, 39]</td>
+                  <td>CVIU</td>
+                  <td>2019</td>
+                  <td>Animal &amp; others</td>
+                  <td>RGB</td>
+                  <td class="align-right">1,250</td>
+                </tr>
+                <tr>
+                  <td>COD10K [11, 12]</td>
+                  <td>CVPR</td>
+                  <td>2020</td>
+                  <td>Animal &amp; others</td>
+                  <td>RGB</td>
+                  <td class="align-right">10,000</td>
+                </tr>
+                <tr>
+                  <td>NC4K [25]</td>
+                  <td>CVPR</td>
+                  <td>2021</td>
+                  <td>Animal &amp; others</td>
+                  <td>RGB</td>
+                  <td class="align-right">4,121</td>
+                </tr>
+                <tr>
+                  <td>Camo-M3FD (Ours)</td>
+                  <td>CVPR</td>
+                  <td>2026</td>
+                  <td>Pedestrian</td>
+                  <td>RGB + Thermal</td>
+                  <td class="align-right">614</td>
+                </tr>
+              </tbody>
+              <caption>Table 1. COD datasets comparison.</caption>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Image carousel -->
+    <section class="hero teaser">
+      <div class="hero-body">
+        <div class="container">
+          <div id="results-carousel" class="carousel results-carousel">
+            <div class="item">
+              <!-- Your image here -->
+              <img src="static/images/aspect_ratio_distribution.png" alt="MY ALT TEXT" />
+              <h2 class="subtitle has-text-centered">
+                Figure 2. Spatial distribution of the centroids of the annotated GT
+                masks.
+              </h2>
+            </div>
+            <div class="item">
+              <!-- Your image here -->
+              <img src="static/images/centroid_positions.png" alt="MY ALT TEXT" />
+              <h2 class="subtitle has-text-centered">
+                Figure 3. Aspect-ratio distribution of the GT masks.
+              </h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End image carousel -->
+
+    <section class="hero is-small is-light">
+      <div class="container is-max-desktop">
+        <div class="hero-body">
+          <div class="container-tb1">
+            <figure id="fig:cameval" class="figure-container2">
+
+              <div class="eval-grid">
+                <div class="rotated-text">RGB Sobel</div>
+                <img src="static/images/Sobel/00027_obj1_x387_y439.png" alt="Sobel 1">
+                <img src="static/images/Sobel/00126_obj1_x32_y399.png" alt="Sobel 2">
+                <img src="static/images/Sobel/00144_obj1_x576_y439.png" alt="Sobel 3">
+                <img src="static/images/Sobel/00458_obj1_x999_y502.png" alt="Sobel 4">
+                <img src="static/images/Sobel/00669_obj1_x456_y455.png" alt="Sobel 5">
+                <img src="static/images/Sobel/04059_obj1_x667_y327.png" alt="Sobel 6">
+                <img src="static/images/Sobel/00926_obj1_x453_y370.png" alt="Sobel 7">
+                <img src="static/images/Sobel/00926_obj1_x453_y370.png" alt="Sobel 8">
+                <img src="static/images/Sobel/01046_obj2_x191_y445.png" alt="Sobel 9">
+
+                <div class="rotated-text">GT Edges</div>
+                <img src="static/images/Edges2/00027_obj1_x387_y439.png" alt="Edges 1">
+                <img src="static/images/Edges2/00126_obj1_x32_y399.png" alt="Edges 2">
+                <img src="static/images/Edges2/00144_obj1_x576_y439.png" alt="Edges 3">
+                <img src="static/images/Edges2/00458_obj1_x999_y502.png" alt="Edges 4">
+                <img src="static/images/Edges2/00669_obj1_x456_y455.png" alt="Edges 5">
+                <img src="static/images/Edges2/04059_obj1_x667_y327.png" alt="Edges 6">
+                <img src="static/images/Edges2/00926_obj1_x453_y370.png" alt="Edges 7">
+                <img src="static/images/Edges2/00990_obj1_x549_y447.png" alt="Edges 8">
+                <img src="static/images/Edges2/01046_obj2_x191_y445.png" alt="Edges 9">
+
+                <div class="rotated-text">Reconstructed</div>
+                <img src="static/images/Reconstruction/00027_obj1_x387_y439reconstructed.jpg" alt="Recon 1">
+                <img src="static/images/Reconstruction/00126_obj1_x32_y399reconstructed.jpg" alt="Recon 2">
+                <img src="static/images/Reconstruction/00144_obj1_x576_y439reconstructed.jpg" alt="Recon 3">
+                <img src="static/images/Reconstruction/00458_obj1_x999_y502reconstructed.jpg" alt="Recon 4">
+                <img src="static/images/Reconstruction/00669_obj1_x456_y455reconstructed.jpg" alt="Recon 5">
+                <img src="static/images/Reconstruction/04059_obj1_x667_y327reconstructed.jpg" alt="Recon 6">
+                <img src="static/images/Reconstruction/00926_obj1_x453_y370reconstructed.jpg" alt="Recon 7">
+                <img src="static/images/Reconstruction/00990_obj2_x443_y453reconstructed.jpg" alt="Recon 8">
+                <img src="static/images/Reconstruction/01046_obj2_x191_y445reconstructed.jpg" alt="Recon 9">
+
+                <div class="math-label"><i>S</i><sub>&alpha;</sub></div>
+                <div class="score">0.8059</div>
+                <div class="score">0.6292</div>
+                <div class="score">0.3946</div>
+                <div class="score">0.7715</div>
+                <div class="score">0.7711</div>
+                <div class="score">0.4472</div>
+                <div class="score">0.7873</div>
+                <div class="score">0.6063</div>
+                <div class="score">0.6052</div>
+              </div>
+
+              <figcaption class="figure-caption2">
+                Figure 4. Examples of accepted images alongside their respective edges extracted by RGB using Sobel,
+                edges of the GT mask, and camouflage scores (<i>S</i><sub>&alpha;</sub>).
+              </figcaption>
+
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero teaser">
+      <div class="container is-max-desktop">
+        <div class="hero-body">
+          <div class="container-tb1">
+            <table id="tab:networks_eval" class="academic-table">
+              <thead>
+                <tr>
+                  <th class="align-left border-right">Technique</th>
+                  <th>Source</th>
+                  <th>Source</th>
+                  <th>Year</th>
+                  <th>Image Size</th>
+                  <th class="align-left">Backbone</th>
+                  <th class="align-right">#Param.</th>
+                </tr>
+                <tr>
+                  <th class="align-left border-right"></th>
+                  <th></th>
+                  <th>Type</th>
+                  <th></th>
+                  <th>(px)</th>
+                  <th class="align-left"></th>
+                  <th class="align-right">(M)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="align-left border-right">BASNet [28]</td>
+                  <td>CVPR</td>
+                  <td>Conference</td>
+                  <td>2019</td>
+                  <td>256 &times; 256</td>
+                  <td class="align-left">ResNet-34 [16]</td>
+                  <td class="align-right">87.06</td>
+                </tr>
+                <tr>
+                  <td class="align-left border-right">SINet-v2 [12]</td>
+                  <td>TPAMI</td>
+                  <td>Journal</td>
+                  <td>2021</td>
+                  <td>352 &times; 352</td>
+                  <td class="align-left">Res2Net-50 [14]</td>
+                  <td class="align-right">24.93</td>
+                </tr>
+                <tr>
+                  <td class="align-left border-right">BGNet [4]</td>
+                  <td>IJCAI</td>
+                  <td>Conference</td>
+                  <td>2022</td>
+                  <td>416 &times; 416</td>
+                  <td class="align-left">Res2Net-50 [14]</td>
+                  <td class="align-right">77.80</td>
+                </tr>
+                <tr>
+                  <td class="align-left border-right">C<sup>2</sup>F-Net [3]</td>
+                  <td>TCSVT</td>
+                  <td>Conference</td>
+                  <td>2022</td>
+                  <td>352 &times; 352</td>
+                  <td class="align-left">Res2Net-50 [14]</td>
+                  <td class="align-right">26.36</td>
+                </tr>
+                <tr>
+                  <td class="align-left border-right">OCENet [23]</td>
+                  <td>WACV</td>
+                  <td>Conference</td>
+                  <td>2022</td>
+                  <td>352 &times; 352</td>
+                  <td class="align-left">ResNet-50 [16]</td>
+                  <td class="align-right">58.17</td>
+                </tr>
+                <tr>
+                  <td class="align-left border-right">EAMNet [30]</td>
+                  <td>ICME</td>
+                  <td>Conference</td>
+                  <td>2023</td>
+                  <td>384 &times; 384</td>
+                  <td class="align-left">Res2Net-50 [14]</td>
+                  <td class="align-right">30.51</td>
+                </tr>
+                <tr>
+                  <td class="align-left border-right">DGNet [19]</td>
+                  <td>MIR</td>
+                  <td>Journal</td>
+                  <td>2023</td>
+                  <td>352 &times; 352</td>
+                  <td class="align-left">EfficientNet [31]</td>
+                  <td class="align-right">8.30</td>
+                </tr>
+                <tr>
+                  <td class="align-left border-right">HitNet [17]</td>
+                  <td>AAAI</td>
+                  <td>Conference</td>
+                  <td>2023</td>
+                  <td>352 &times; 352</td>
+                  <td class="align-left">PVTv2 [37]</td>
+                  <td class="align-right">25.73</td>
+                </tr>
+                <tr>
+                  <td class="align-left border-right">PCNet [40]</td>
+                  <td>arXiv</td>
+                  <td>-</td>
+                  <td>2024</td>
+                  <td>352 &times; 352</td>
+                  <td class="align-left">PVTv2 [37]</td>
+                  <td class="align-right">27.66</td>
+                </tr>
+                <tr>
+                  <td class="align-left border-right">CTF-Net [41]</td>
+                  <td>CVIU</td>
+                  <td>Journal</td>
+                  <td>2025</td>
+                  <td>384 &times; 384</td>
+                  <td class="align-left">PVTv2 [37]</td>
+                  <td class="align-right">64.48</td>
+                </tr>
+                <tr>
+                  <td class="align-left border-right">AVNet [33]</td>
+                  <td>VISAPP</td>
+                  <td>Conference</td>
+                  <td>2026</td>
+                  <td>416 &times; 416</td>
+                  <td class="align-left">PVTv2 [37]</td>
+                  <td class="align-right">48.04</td>
+                </tr>
+              </tbody>
+              <caption>Table 2. Distinctive characteristics of the evaluated SoTA COD techniques.</caption>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero is-small is-light">
+      <div class="container is-max-desktop">
+        <div class="hero-body">
+          <div class="container-tb1">
+            <table class="academic-table2">
+              <thead>
+                <tr>
+                  <th class="align-left border-right">Technique</th>
+                  <th class="border-right">Input</th>
+                  <th><i>S</i><sub>&alpha;</sub> &uarr;</th>
+                  <th><i>F</i><sub>&beta;</sub><sup><i>w</i></sup> &uarr;</th>
+                  <th><i>M</i> &darr;</th>
+                  <th><i>E</i><sub>&phi;</sub><sup><i>adp</i></sup> &uarr;</th>
+                  <th><i>E</i><sub>&phi;</sub><sup><i>mean</i></sup> &uarr;</th>
+                  <th><i>E</i><sub>&phi;</sub><sup><i>max</i></sup> &uarr;</th>
+                  <th><i>F</i><sub>&beta;</sub><sup><i>adp</i></sup> &uarr;</th>
+                  <th><i>F</i><sub>&beta;</sub><sup><i>mean</i></sup> &uarr;</th>
+                  <th><i>F</i><sub>&beta;</sub><sup><i>max</i></sup> &uarr;</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td rowspan="2" class="align-left border-right">BASNet [28]</td>
+                  <td class="border-right">Vis</td>
+                  <td>0.6239</td>
+                  <td>0.2902</td>
+                  <td>0.0032</td>
+                  <td>0.6972</td>
+                  <td>0.7183</td>
+                  <td>0.8042</td>
+                  <td>0.2879</td>
+                  <td>0.3057</td>
+                  <td>0.3137</td>
+                </tr>
+                <tr class="tech-divider">
+                  <td class="border-right">Th</td>
+                  <td>0.7051</td>
+                  <td>0.4161</td>
+                  <td class="second-place">0.0028</td>
+                  <td>0.7293</td>
+                  <td>0.7822</td>
+                  <td>0.8078</td>
+                  <td>0.3762</td>
+                  <td>0.4358</td>
+                  <td>0.4571</td>
+                </tr>
+
+                <tr>
+                  <td rowspan="2" class="align-left border-right">SINet-v2 [12]</td>
+                  <td class="border-right">Vis</td>
+                  <td>0.6275</td>
+                  <td>0.2693</td>
+                  <td>0.0037</td>
+                  <td>0.6039</td>
+                  <td>0.7080</td>
+                  <td>0.7227</td>
+                  <td>0.2244</td>
+                  <td>0.2872</td>
+                  <td>0.3033</td>
+                </tr>
+                <tr class="tech-divider">
+                  <td class="border-right">Th</td>
+                  <td>0.6927</td>
+                  <td>0.4072</td>
+                  <td>0.0034</td>
+                  <td>0.6450</td>
+                  <td>0.7593</td>
+                  <td>0.7949</td>
+                  <td>0.3428</td>
+                  <td>0.4244</td>
+                  <td>0.4424</td>
+                </tr>
+
+                <tr>
+                  <td rowspan="2" class="align-left border-right">BGNet [4]</td>
+                  <td class="border-right">Vis</td>
+                  <td>0.6745</td>
+                  <td>0.3922</td>
+                  <td>0.0500</td>
+                  <td>0.7594</td>
+                  <td>0.7687</td>
+                  <td>0.8142</td>
+                  <td>0.3576</td>
+                  <td>0.4124</td>
+                  <td>0.4255</td>
+                </tr>
+                <tr class="tech-divider">
+                  <td class="border-right">Th</td>
+                  <td>0.7196</td>
+                  <td>0.4699</td>
+                  <td>0.0106</td>
+                  <td>0.7664</td>
+                  <td class="first-place">0.8306</td>
+                  <td class="third-place">0.8539</td>
+                  <td class="third-place">0.4315</td>
+                  <td>0.4865</td>
+                  <td>0.4963</td>
+                </tr>
+
+                <tr>
+                  <td rowspan="2" class="align-left border-right">C<sup>2</sup>F-Net [3]</td>
+                  <td class="border-right">Vis</td>
+                  <td>0.5137</td>
+                  <td>0.0432</td>
+                  <td>0.0811</td>
+                  <td>0.4804</td>
+                  <td>0.6079</td>
+                  <td>0.7333</td>
+                  <td>0.1433</td>
+                  <td>0.2155</td>
+                  <td>0.2554</td>
+                </tr>
+                <tr class="tech-divider">
+                  <td class="border-right">Th</td>
+                  <td>0.5244</td>
+                  <td>0.0522</td>
+                  <td>0.0663</td>
+                  <td>0.5122</td>
+                  <td>0.6432</td>
+                  <td>0.7656</td>
+                  <td>0.2064</td>
+                  <td>0.2882</td>
+                  <td>0.3437</td>
+                </tr>
+
+                <tr>
+                  <td rowspan="2" class="align-left border-right">OCENet [23]</td>
+                  <td class="border-right">Vis</td>
+                  <td>0.5994</td>
+                  <td>0.2357</td>
+                  <td>0.0037</td>
+                  <td>0.6680</td>
+                  <td>0.7975</td>
+                  <td>0.8201</td>
+                  <td>0.2240</td>
+                  <td>0.2546</td>
+                  <td>0.2632</td>
+                </tr>
+                <tr class="tech-divider">
+                  <td class="border-right">Th</td>
+                  <td class="third-place">0.7277</td>
+                  <td class="third-place">0.4884</td>
+                  <td>0.0037</td>
+                  <td>0.7122</td>
+                  <td>0.8152</td>
+                  <td class="first-place">0.8666</td>
+                  <td>0.4253</td>
+                  <td class="second-place">0.4998</td>
+                  <td class="first-place">0.5403</td>
+                </tr>
+
+                <tr>
+                  <td rowspan="2" class="align-left border-right">EAMNet [30]</td>
+                  <td class="border-right">Vis</td>
+                  <td>0.5227</td>
+                  <td>0.0494</td>
+                  <td>0.0160</td>
+                  <td>0.4048</td>
+                  <td>0.6141</td>
+                  <td>0.8109</td>
+                  <td>0.0998</td>
+                  <td>0.1752</td>
+                  <td>0.2352</td>
+                </tr>
+                <tr class="tech-divider">
+                  <td class="border-right">Th</td>
+                  <td>0.5047</td>
+                  <td>0.0333</td>
+                  <td>0.0506</td>
+                  <td>0.4946</td>
+                  <td>0.6458</td>
+                  <td>0.8091</td>
+                  <td>0.1836</td>
+                  <td>0.2622</td>
+                  <td>0.3799</td>
+                </tr>
+
+                <tr>
+                  <td rowspan="2" class="align-left border-right">DGNet [19]</td>
+                  <td class="border-right">Vis</td>
+                  <td>0.6438</td>
+                  <td>0.3109</td>
+                  <td>0.0039</td>
+                  <td>0.6720</td>
+                  <td>0.7598</td>
+                  <td>0.7739</td>
+                  <td>0.2759</td>
+                  <td>0.3235</td>
+                  <td>0.3377</td>
+                </tr>
+                <tr class="tech-divider">
+                  <td class="border-right">Th</td>
+                  <td>0.6898</td>
+                  <td>0.4073</td>
+                  <td>0.0052</td>
+                  <td>0.6765</td>
+                  <td>0.7928</td>
+                  <td>0.8227</td>
+                  <td>0.3586</td>
+                  <td>0.4244</td>
+                  <td>0.4403</td>
+                </tr>
+                <tr>
+                  <td rowspan="2" class="align-left border-right">HitNet [17]</td>
+                  <td class="border-right">Vis</td>
+                  <td>0.5659</td>
+                  <td>0.1593</td>
+                  <td>0.0030</td>
+                  <td>0.7333</td>
+                  <td>0.5685</td>
+                  <td>0.7353</td>
+                  <td>0.1815</td>
+                  <td>0.1721</td>
+                  <td>0.1809</td>
+                </tr>
+                <tr class="tech-divider">
+                  <td class="border-right">Th</td>
+                  <td>0.6682</td>
+                  <td>0.3622</td>
+                  <td class="third-place">0.0029</td>
+                  <td>0.7694</td>
+                  <td>0.7466</td>
+                  <td>0.7778</td>
+                  <td>0.3910</td>
+                  <td>0.3800</td>
+                  <td>0.3919</td>
+                </tr>
+
+                <tr>
+                  <td rowspan="2" class="align-left border-right">PCNet [40]</td>
+                  <td class="border-right">Vis</td>
+                  <td>0.6512</td>
+                  <td>0.3227</td>
+                  <td>0.0034</td>
+                  <td>0.5048</td>
+                  <td>0.7639</td>
+                  <td>0.8069</td>
+                  <td>0.1688</td>
+                  <td>0.3464</td>
+                  <td>0.3552</td>
+                </tr>
+                <tr class="tech-divider">
+                  <td class="border-right">Th</td>
+                  <td>0.7034</td>
+                  <td>0.4260</td>
+                  <td>0.0030</td>
+                  <td>0.6187</td>
+                  <td class="third-place">0.8280</td>
+                  <td>0.8428</td>
+                  <td>0.2674</td>
+                  <td>0.4504</td>
+                  <td>0.4572</td>
+                </tr>
+
+                <tr>
+                  <td rowspan="2" class="align-left border-right">CTF-Net [41]</td>
+                  <td class="border-right">Vis</td>
+                  <td>0.5077</td>
+                  <td>0.0525</td>
+                  <td>0.0755</td>
+                  <td>0.4201</td>
+                  <td>0.5912</td>
+                  <td>0.7296</td>
+                  <td>0.1322</td>
+                  <td>0.2449</td>
+                  <td>0.3146</td>
+                </tr>
+                <tr class="tech-divider">
+                  <td class="border-right">Th</td>
+                  <td>0.6532</td>
+                  <td>0.2955</td>
+                  <td>0.0116</td>
+                  <td>0.4178</td>
+                  <td>0.7515</td>
+                  <td>0.8073</td>
+                  <td>0.1409</td>
+                  <td>0.4310</td>
+                  <td>0.4794</td>
+                </tr>
+                <tr>
+                  <td rowspan="3" class="align-left border-right">AVNet [33]</td>
+                  <td class="border-right">Vis</td>
+                  <td>0.6669</td>
+                  <td>0.4035</td>
+                  <td class="third-place">0.0029</td>
+                  <td class="first-place">0.8294</td>
+                  <td>0.8164</td>
+                  <td>0.8287</td>
+                  <td>0.3923</td>
+                  <td>0.3985</td>
+                  <td>0.4068</td>
+                </tr>
+                <tr>
+                  <td class="border-right">Th</td>
+                  <td class="second-place">0.7289</td>
+                  <td class="second-place">0.5066</td>
+                  <td class="first-place">0.0026</td>
+                  <td class="third-place">0.7989</td>
+                  <td>0.8075</td>
+                  <td>0.8242</td>
+                  <td class="second-place">0.4831</td>
+                  <td class="third-place">0.4926</td>
+                  <td class="third-place">0.5113</td>
+                </tr>
+                <tr>
+                  <td class="border-right">Vis+Th</td>
+                  <td class="first-place">0.7318</td>
+                  <td class="first-place">0.5301</td>
+                  <td>0.0030</td>
+                  <td class="second-place">0.8167</td>
+                  <td class="second-place">0.8287</td>
+                  <td class="second-place">0.8617</td>
+                  <td class="first-place">0.5051</td>
+                  <td class="first-place">0.5139</td>
+                  <td class="second-place">0.5362</td>
+                </tr>
+              </tbody>
+              <caption>
+                Table 3. Metric evaluation results for each COD technique on the Camo-M3FD dataset, reported for the RGB
+                and Thermal baseline. Results are presented using the metric notation defined in Sec. 3.5, "&uarr; /
+                &darr;" indicates that larger or smaller is better. The best three performing results are highlighted
+                using color: <span class="first-place">First</span>, <span class="second-place">Second</span>, and <span
+                  class="third-place">Third</span> respectively.
+              </caption>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="hero teaser">
+      <div class="container is-max-desktop">
+        <div class="hero-body">
+          <div class="container-tb1">
+            <figure id="fig:results" class="figure-container-results">
+  
+  <div class="results-grid">
+    
+    <div class="rotated-text-small">RGB</div>
+    <img src="static/images/results/rgb/01541.png" alt="RGB 1">
+    <img src="static/images/results/rgb/00274.png" alt="RGB 2">
+    <img src="static/images/results/rgb/00883.png" alt="RGB 3">
+    <img src="static/images/results/rgb/01083.png" alt="RGB 4">
+    <img src="static/images/results/rgb/00387.png" alt="RGB 5">
+    <img src="static/images/results/rgb/01033.png" alt="RGB 6">
+
+    <div class="rotated-text-small">Thermal</div>
+    <img src="static/images/results/thermal/01541.png" alt="Thermal 1">
+    <img src="static/images/results/thermal/00274.png" alt="Thermal 2">
+    <img src="static/images/results/thermal/00883.png" alt="Thermal 3">
+    <img src="static/images/results/thermal/01083.png" alt="Thermal 4">
+    <img src="static/images/results/thermal/00387.png" alt="Thermal 5">
+    <img src="static/images/results/thermal/01033.png" alt="Thermal 6">
+
+    <div class="rotated-text-small">GT</div>
+    <img src="static/images/results/gt/01541.png" alt="GT 1">
+    <img src="static/images/results/gt/00274.png" alt="GT 2">
+    <img src="static/images/results/gt/00883.png" alt="GT 3">
+    <img src="static/images/results/gt/01083.png" alt="GT 4">
+    <img src="static/images/results/gt/00387.png" alt="GT 5">
+    <img src="static/images/results/gt/01033.png" alt="GT 6">
+
+    <div class="rotated-text-small">BASNet Th [28]</div>
+    <img src="static/images/results/basnet/01541_fusion.png" alt="BASNet 1">
+    <img src="static/images/results/basnet/00274_fusion.png" alt="BASNet 2">
+    <img src="static/images/results/basnet/00883_fusion.png" alt="BASNet 3">
+    <img src="static/images/results/basnet/01083_fusion.png" alt="BASNet 4">
+    <img src="static/images/results/basnet/00387_fusion.png" alt="BASNet 5">
+    <img src="static/images/results/basnet/01033_fusion.png" alt="BASNet 6">
+
+    <div class="rotated-text-small">BGNet Th [4]</div>
+    <img src="static/images/results/bgnet/01541_fusion.png" alt="BGNet 1">
+    <img src="static/images/results/bgnet/00274_fusion.png" alt="BGNet 2">
+    <img src="static/images/results/bgnet/00883_fusion.png" alt="BGNet 3">
+    <img src="static/images/results/bgnet/01083_fusion.png" alt="BGNet 4">
+    <img src="static/images/results/bgnet/00387_fusion.png" alt="BGNet 5">
+    <img src="static/images/results/bgnet/01033_fusion.png" alt="BGNet 6">
+
+    <div class="rotated-text-small">OCENet Th [23]</div>
+    <img src="static/images/results/ocenet/01541_fusion.png" alt="OCENet 1">
+    <img src="static/images/results/ocenet/00274_fusion.png" alt="OCENet 2">
+    <img src="static/images/results/ocenet/00883_fusion.png" alt="OCENet 3">
+    <img src="static/images/results/ocenet/01083_fusion.png" alt="OCENet 4">
+    <img src="static/images/results/ocenet/00387_fusion.png" alt="OCENet 5">
+    <img src="static/images/results/ocenet/01033_fusion.png" alt="OCENet 6">
+
+    <div class="rotated-text-small">AVNet Vis [33]</div>
+    <img src="static/images/results/avnet_vis/01541_fusion.png" alt="AVNet Vis 1">
+    <img src="static/images/results/avnet_vis/00274_fusion.png" alt="AVNet Vis 2">
+    <img src="static/images/results/avnet_vis/00883_fusion.png" alt="AVNet Vis 3">
+    <img src="static/images/results/avnet_vis/01083_fusion.png" alt="AVNet Vis 4">
+    <img src="static/images/results/avnet_vis/00387_fusion.png" alt="AVNet Vis 5">
+    <img src="static/images/results/avnet_vis/01033_fusion.png" alt="AVNet Vis 6">
+
+    <div class="rotated-text-small">AVNet Th [33]</div>
+    <img src="static/images/results/avnet_th/01541_fusion.png" alt="AVNet Th 1">
+    <img src="static/images/results/avnet_th/00274_fusion.png" alt="AVNet Th 2">
+    <img src="static/images/results/avnet_th/00883_fusion.png" alt="AVNet Th 3">
+    <img src="static/images/results/avnet_th/01083_fusion.png" alt="AVNet Th 4">
+    <img src="static/images/results/avnet_th/00387_fusion.png" alt="AVNet Th 5">
+    <img src="static/images/results/avnet_th/01033_fusion.png" alt="AVNet Th 6">
+
+    <div class="rotated-text-small">AVNet Vis+Th [33]</div>
+    <img src="static/images/results/avnet/01541_fusion.png" alt="AVNet Vis+Th 1">
+    <img src="static/images/results/avnet/00274_fusion.png" alt="AVNet Vis+Th 2">
+    <img src="static/images/results/avnet/00883_fusion.png" alt="AVNet Vis+Th 3">
+    <img src="static/images/results/avnet/01083_fusion.png" alt="AVNet Vis+Th 4">
+    <img src="static/images/results/avnet/00387_fusion.png" alt="AVNet Vis+Th 5">
+    <img src="static/images/results/avnet/01033_fusion.png" alt="AVNet Vis+Th 6">
+
+  </div>
+
+  <figcaption class="figure-caption-results">
+    Figure 5. Results using SoTA COD techniques that have achieved first or second place in at least one of the metrics. Successful matches between GT and predicted masks (white areas); False positive regions (red areas, over-segmentation); and false negative regions (blue areas, miss-segmentation).
+  </figcaption>
+
+</figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section class="hero teaser">
+      <div class="container is-max-desktop">
+        <div class="hero-body">
+          <div class="container-tb1">
+            <img src="static/images/pipeline_v1.png" alt="MY ALT TEXT" />
+            <h2 class="subtitle has-text-centered">
+              <p style="margin-top: 20px;">
+                Overall pipeline of the proposed methodology.
+              </p>
+            </h2>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+
+    <!-- Paper poster -->
+    <section class="hero is-small is-light">
+      <div class="hero-body">
+        <div class="container">
+          <h2 class="title">Paper</h2>
+
+          <!-- TODO: Replace with your poster PDF -->
+          <iframe src="static/pdfs/A_New_Benchmark_Dataset_for_Camouflaged_Pedestrian_Detection___CVPR2026.pdf" width="100%" height="550">
+          </iframe>
+
+        </div>
+      </div>
+    </section>
+    <!--End paper poster -->
+
+
+
+    <!--BibTex citation -->
+    <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <div class="bibtex-header">
+        <h2 class="title">BibTeX</h2>
+        <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
+          <i class="fas fa-copy"></i>
+          <span class="copy-text">Copy</span>
+        </button>
+      </div>
+      <p>If you use this dataset, please cite us,</p>
+      <pre id="bibtex-code">
+        <code>
+          @article{velesaca2026camoM3FD,
+            author       = {},
+            title        = {Camo-M3FD: A New Benchmark Dataset for Cross-Spectral Camouflaged Pedestrian Detection},
+            journal      = {},
+            doi          = {}
+          }
+        </code>
+      </pre>
+    </div>
+</section>
+    <!--End BibTex citation Velesaca Lara, Henry and Castillo, Guillermo and Mero, Andrea and Sappa, Angel -->
+
+
+    <footer class="footer">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-8">
+            <div class="content">
+
+              <p>
+                This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template"
+                  target="_blank">Academic Project Page Template</a> which was adopted from the <a
+                  href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+                You are free to borrow the source code of this website, we just ask that you link back to this page in
+                the footer. <br> This website is licensed under a <a rel="license"
+                  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+                  Commons Attribution-ShareAlike 4.0 International License</a>.
+              </p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- End of Statcounter Code -->
+
+</body>
+
+</html>
