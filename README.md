@@ -1,4 +1,4 @@
-# Unveiling the Hidden: Early Detection of Invasive Vegetation in Crops with UAV Multispectral Imaging Website
+# Camo-M3FD: A New Benchmark Dataset for Cross-Spectral Camouflaged Pedestrian Detection
 
 ## Acknowledgments
 Parts of this project page were adopted from the [Academic-project-page-template](https://github.com/eliahuhorwitz/Academic-project-page-template) and [Nerfies](https://nerfies.github.io/) page.
