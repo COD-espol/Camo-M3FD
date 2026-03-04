@@ -872,7 +872,7 @@ a:focus {
   /* Cuadrícula de 10 columnas: 1 para etiquetas (auto) + 9 para imágenes (fracciones iguales) */
   .eval-grid {
     display: grid;
-    grid-template-columns: auto repeat(9, 1fr);
+    grid-template-columns: auto repeat(11, 1fr);
     /* grid-gap a 0 o 1px para simular que están pegadas como en la imagen */
     gap: 5px; 
     align-items: center; 

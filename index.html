@@ -327,6 +327,20 @@
             <figure id="fig:cameval" class="figure-container2">
 
               <div class="eval-grid">
+                <div class="rotated-text">RGB</div>
+                <img src="static/images/rgb_crop/00027_obj1_x387_y439.png" alt="Recon 1">
+                <img src="static/images/rgb_crop/00126_obj1_x32_y399.png" alt="Recon 2">
+                <img src="static/images/rgb_crop/00144_obj1_x576_y439.png" alt="Recon 3">
+                <img src="static/images/rgb_crop/00458_obj1_x999_y502.png" alt="Recon 4">
+                <img src="static/images/rgb_crop/00669_obj1_x456_y455.png" alt="Recon 5">
+                <img src="static/images/rgb_crop/04059_obj1_x667_y327.png" alt="Recon 6">
+                <img src="static/images/rgb_crop/00926_obj1_x453_y370.png" alt="Recon 7">
+                <img src="static/images/rgb_crop/01046_obj2_x191_y445.png" alt="Recon 8">
+                <img src="static/images/rgb_crop/02813_obj1_x550_y530.png" alt="Recon 9">
+                <img src="static/images/rgb_crop/01219_obj2_x262_y439.png" alt="Recon 10">
+                <img src="static/images/rgb_crop/02489_obj1_x701_y561.png" alt="Recon 11">
+                
+
                 <div class="rotated-text">RGB Sobel</div>
                 <img src="static/images/Sobel/00027_obj1_x387_y439.png" alt="Sobel 1">
                 <img src="static/images/Sobel/00126_obj1_x32_y399.png" alt="Sobel 2">
@@ -335,8 +349,10 @@
                 <img src="static/images/Sobel/00669_obj1_x456_y455.png" alt="Sobel 5">
                 <img src="static/images/Sobel/04059_obj1_x667_y327.png" alt="Sobel 6">
                 <img src="static/images/Sobel/00926_obj1_x453_y370.png" alt="Sobel 7">
-                <img src="static/images/Sobel/00926_obj1_x453_y370.png" alt="Sobel 8">
-                <img src="static/images/Sobel/01046_obj2_x191_y445.png" alt="Sobel 9">
+                <img src="static/images/Sobel/01046_obj2_x191_y445.png" alt="Sobel 8">
+                <img src="static/images/Sobel/02813_obj1_x550_y530.png" alt="Sobel 9">
+                <img src="static/images/Sobel/01219_obj2_x262_y439.png" alt="Sobel 10">
+                <img src="static/images/Sobel/02489_obj1_x701_y561.png" alt="Sobel 11">
 
                 <div class="rotated-text">GT Edges</div>
                 <img src="static/images/Edges2/00027_obj1_x387_y439.png" alt="Edges 1">
@@ -346,19 +362,12 @@
                 <img src="static/images/Edges2/00669_obj1_x456_y455.png" alt="Edges 5">
                 <img src="static/images/Edges2/04059_obj1_x667_y327.png" alt="Edges 6">
                 <img src="static/images/Edges2/00926_obj1_x453_y370.png" alt="Edges 7">
-                <img src="static/images/Edges2/00990_obj1_x549_y447.png" alt="Edges 8">
-                <img src="static/images/Edges2/01046_obj2_x191_y445.png" alt="Edges 9">
+                <img src="static/images/Edges2/01046_obj2_x191_y445.png" alt="Edges 8">
+                <img src="static/images/Edges2/02813_obj1_x550_y530.png" alt="Edges 9">
+                <img src="static/images/Edges2/01219_obj2_x262_y439.png" alt="Edges 10">
+                <img src="static/images/Edges2/02489_obj1_x701_y561.png" alt="Edges 11">
 
-                <div class="rotated-text">Reconstructed</div>
-                <img src="static/images/Reconstruction/00027_obj1_x387_y439reconstructed.jpg" alt="Recon 1">
-                <img src="static/images/Reconstruction/00126_obj1_x32_y399reconstructed.jpg" alt="Recon 2">
-                <img src="static/images/Reconstruction/00144_obj1_x576_y439reconstructed.jpg" alt="Recon 3">
-                <img src="static/images/Reconstruction/00458_obj1_x999_y502reconstructed.jpg" alt="Recon 4">
-                <img src="static/images/Reconstruction/00669_obj1_x456_y455reconstructed.jpg" alt="Recon 5">
-                <img src="static/images/Reconstruction/04059_obj1_x667_y327reconstructed.jpg" alt="Recon 6">
-                <img src="static/images/Reconstruction/00926_obj1_x453_y370reconstructed.jpg" alt="Recon 7">
-                <img src="static/images/Reconstruction/00990_obj2_x443_y453reconstructed.jpg" alt="Recon 8">
-                <img src="static/images/Reconstruction/01046_obj2_x191_y445reconstructed.jpg" alt="Recon 9">
+        
 
                 <div class="math-label"><i>S</i><sub>&alpha;</sub></div>
                 <div class="score">0.8059</div>
@@ -368,12 +377,14 @@
                 <div class="score">0.7711</div>
                 <div class="score">0.4472</div>
                 <div class="score">0.7873</div>
-                <div class="score">0.6063</div>
                 <div class="score">0.6052</div>
+                <div class="score" style="color:red;">0.3358</div>
+                <div class="score" style="color:red;">0.3573</div>
+                <div class="score" style="color:red;">0.3600</div>
               </div>
 
               <figcaption class="figure-caption2">
-                Figure 4. Examples of accepted images alongside their respective edges extracted by RGB using Sobel,
+                Figure 4. Examples of accepted and rejected (marked in red) images alongside their respective edges extracted by RGB using Sobel,
                 edges of the GT mask, and camouflage scores (<i>S</i><sub>&alpha;</sub>).
               </figcaption>
 
